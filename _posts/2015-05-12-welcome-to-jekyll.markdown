@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Setting up new blog with Jekyll!"
+title:  "新的blog(with Jekyll)!"
 date:   2015-05-12 16:49:50
 categories: jekyll update
 ---
 #### Introduction
-Today I setup my new blog with jekyll on github. `Why?` First, my own domain and web hosting on GoDaddy has expired recently. I need a new site to host my blogs(even though I don't blog frequently). Second, github is fanscinating, jekyll is awesome. I want to use it.
+Today I setup my new blog with jekyll on github. `Why?` First, my own domain and web hosting on GoDaddy has expired recently. I need a new site to host my blogs(even though I don't blog frequently). Second, github is fanscinating, jekyll is awesome. I want to use them.
 So now the blog is set.
 
 #### Future
