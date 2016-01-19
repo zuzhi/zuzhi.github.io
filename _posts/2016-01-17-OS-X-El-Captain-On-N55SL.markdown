@@ -4,6 +4,7 @@ title: "OS X El Captain On N55SL- Hackintosh"
 data: 2016-01-17 20:56:00
 categories: hackintosh
 ---
+![我的系统磁盘分区](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117144412.png "我的系统磁盘分区")
 ## 写在前面
 OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要求读书的时候，我肯定早就当小白鼠尝鲜了，无奈之前太忙没时间折腾。还好最近偷闲得一两个周末，把系统重新装了一下，苹果系统还是那么可口。✌
 
@@ -61,3 +62,5 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要
 
 ### 8. 系统分区－启动
 启动。一些简单的配置之后，进入系统。搞定。
+最后我的系统磁盘是这样的：
+![我的系统磁盘分区](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117144412.png "我的系统磁盘分区")
