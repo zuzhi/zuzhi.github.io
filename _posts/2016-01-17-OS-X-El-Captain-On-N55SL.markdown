@@ -27,9 +27,13 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要
 
 ## 安装
 
-### 1. 下载懒人版镜像，及安装中的各种工具
-百度云：http://pan.baidu.com/s/1pKeeB3t 提取密码：`d912`
+### 1. 下载懒人版镜像，安装中的工具和Extra文件夹
+- 镜像 - 百度云：http://pan.baidu.com/s/1pKeeB3t 提取密码：`d912`
 ![懒人版镜像](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/QQ20160114-0.png "懒人版镜像")
+- 工具 - 百度云：http://pan.baidu.com/s/1mhcPPji 提取密码：`wuhc`
+![工具](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/QQ20160119-0.png "工具")
+- Extra - 百度云：http://pan.baidu.com/s/1jGSe9XO 提取密码：`u5vy`
+![Extra](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/QQ20160119-1.png "Extra")
 
 ### 2. 写入懒人版镜像到硬盘分区（启动分区）
 
