@@ -82,4 +82,4 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要
 
 
 > 最后，我在筹钱购置主机和域名来升级我的博客，认可我的付出，不妨扫一扫下面的二维码，微信打赏我。
-![微信打赏](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/IMG_1479.jpg "微信打赏")
+![微信打赏](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/IMG_1479.JPG "微信打赏")
