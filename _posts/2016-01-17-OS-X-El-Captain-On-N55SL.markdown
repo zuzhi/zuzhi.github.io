@@ -4,7 +4,8 @@ title: "OS X El Captain On N55SL- Hackintosh"
 data: 2016-01-17 20:56:00
 categories: hackintosh
 ---
-![我的系统磁盘分区](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117144412.png "我的系统磁盘分区")
+![OS X El Captain](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-01-19%20%E4%B8%8B%E5%8D%885.50.08.png "OS X El Captain")
+
 ## 写在前面
 OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要求读书的时候，我肯定早就当小白鼠尝鲜了，无奈之前太忙没时间折腾。还好最近偷闲得一两个周末，把系统重新装了一下，苹果系统还是那么可口。✌
 
@@ -28,6 +29,7 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要
 
 ### 1. 下载懒人版镜像，及安装中的各种工具
 百度云：http://pan.baidu.com/s/1pKeeB3t 提取密码：`d912`
+![懒人版镜像](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/QQ20160114-0.png "懒人版镜像")
 
 ### 2. 写入懒人版镜像到硬盘分区（启动分区）
 
@@ -46,13 +48,18 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要
 3.1. 安装变色龙启动器，分两步，一是使用变色龙安装器安装，二是替换C盘根目录下的wowpc.iso，替换成要使用的版本。本次安装使用了2795版
 
 3.2. 替换启动分区Extra目录下的文件
+![调整后的Extra文件夹](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117145719.png "调整后的Extra文件夹")
+
 
 ### 4. 启动分区－文件调整
 
 4.1. 之前制作的启动分区，根目录下少了一个文件BaseSystem.dmg，但是制作启动分区是，硬盘安装助手会减小分区的大小，导致分区空间不足以放下这个文件，我的解决方法是删除掉/S/L/E下的NVD开头的和AMD开头的驱动，删除/S/I/P下的两个PayLoads文件夹，这样启动分区就可以放下BaseSystem.dmg文件了，将其放入根目录。
+![文件调整，放入BaseSystem.dmg](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117145706.png "文件调整，放入BaseSystem.dmg")
 
 ### 5. 启动分区－启动
 不出意外的话，选择启动分区（OS X BaseSystem），回车，就可以启动安装系统了。注：变色龙的启动标志（kernel flags）在/Extra下的org.chameleon.Boot.plist文件里配置。其中-f代表重建系统缓存，-v表示啰嗦模式，会显示启动过程中执行记录。也可以在选择里启动磁盘时，手动敲上这些标志。
+![org.chameleon.Boot.plist文件](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117145814.png "org.chameleon.Boot.plist文件")
+
 
 ### 6. 安装
 这里只需要按照提示安装，选择之前制作好的系统分区（不要选错！），安装过程中可以查看安装日志
