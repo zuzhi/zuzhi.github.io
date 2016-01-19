@@ -79,7 +79,9 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要
 最后我的系统磁盘是这样的：
 ![我的系统磁盘分区](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117144412.png "我的系统磁盘分区")
 
+### 9. 写在最后
+当然啦，教程难免有不尽详细之处，要是安装过程中遇到问题，可以联系我解决。不忙的时候，我总是很热心的。:p
 
+> 最后，我在筹钱购置主机和域名来升级我的博客，认可我的付出，不妨扫一扫下面的二维码进行微信打赏。捂脸~。:p
 
-> 最后，我在筹钱购置主机和域名来升级我的博客，认可我的付出，不妨扫一扫下面的二维码，微信打赏我。
-![微信打赏](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/IMG_1479.JPG "微信打赏")
+![微信打赏](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/IMG_1479_cut.jpg "微信打赏")
