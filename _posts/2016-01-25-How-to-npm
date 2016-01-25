@@ -1,0 +1,243 @@
+---
+layout: post
+title: "how to npm"
+data: 2016-01-25 18:18:51
+categories: nodejs
+---
+![How to npm - screen capture](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/QQ20160125-0.png "How to npm")
+
+## npm
+
+> npm  is  the package manager for the Node JavaScript platform.  It puts modules in place so that node can find  them,  and  manages  dependency conflicts intelligently. It  is  extremely  configurable to support a wide variety of use cases. Most commonly, it is used to publish, discover,  install,  and  develop
+node programs.
+
+为了学习nodejs，我把`NodeSchool`-(nodeschool.io)的`how-to-npm`-(https://github.com/npm/how-to-npm)作为参考教程
+
+`how-to-npm`的菜单如下：
+
+```
+HOW-TO-NPM
+    ----------
+    00 Install npm                                        [COMPLETED]
+    01 Dev Environment                                    [COMPLETED]
+    02 Login                                              [COMPLETED]
+    03 Start A Project                                    [COMPLETED]
+    04 Install A Module                                   [COMPLETED]
+    05 Listing Dependencies                               [COMPLETED]
+    06 npm Test                                           [COMPLETED]
+    07 Package Niceties                                   [COMPLETED]
+    08 Publish                                            [COMPLETED]
+    09 Version                                            [COMPLETED]
+    10 Publish Again                                      [COMPLETED]
+    11 Dist Tag                                           [COMPLETED]
+    12 Dist Tag Removal                                   [COMPLETED]
+    13 Outdated                                           [COMPLETED]
+    14 Update                                             [COMPLETED]
+    15 Rm                                                 [COMPLETED]
+    16 Finale                                             [COMPLETED]
+    -----------------
+    HELP
+```
+
+## 00 Install npm
+安装nodejs，npm也被一起安装了。
+
+npm帮助类的命令：
+```java
+npm <cmd> -h     quick help on <cmd>
+npm -l           display full usage info
+npm faq          commonly asked questions
+npm help <term>  search for help on <term>
+npm help npm     involved overview
+```
+第一个命令可以快速查看`<cmd>`的用法，第三个是查看详细说明
+
+## 01 Dev Environment
+npm的一个重要功能是安装package，为了不把文件搞得很混乱，所以得`mkdir`并`cd`进去
+
+
+## 02 Login
+npm的另一个优点是你可以**建立账户**并发布自己写的package，使用`npm adduser`命令，根据提示输入用户名、密码和邮箱来创建账户。
+`npm whoami`这个命令可以查看你以什么身份登录
+
+
+## 03 Start A Project
+`npm init --scope=<username>`，将创建一个package.json文件
+```java
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+```
+之后再使用`npm install <pkg> --save`来安装包并将其作为依赖包加入到package.json的相应位置
+```java
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+```
+按照提示输入以下信息（括号中为默认值）创建package.json文件
+```
+name(@zuzhi/node),
+version(1.0.0),
+description(),
+entry point(index.js),
+test command,
+git repository,
+keywords,
+author,
+license(ISC)
+```
+全部按照默认值在node2文件下以用户zuzhi来创建的package.json文件如下：
+```json
+{
+  "name": "@zuzhi/node2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
+## 04 Install a module
+
+安装依赖包，Dependencies are fetched from the registry, and unpacked in the `node_modules`
+folder.
+
+使用命令`npm install <modulename>`来安装，但是使用该命令安装后会提示`extraneous`，因为安装的依赖包还没有被写到package.json的dependencies，重新执行命令`npm install <modulename> --save`或者编辑package.json来解决。
+
+## 05 Listing Dependencies
+
+命令`npm ls`用来显示已安装的stuff
+
+## 06 npm Test
+
+当前的package.json中，scripts一项如下：
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+npm可以作为一个task runner，几乎所有的模块和工程都有一个测试脚本来保证一切正常，为了提醒你完善该脚本，npm默认放了一个"always failing"(总是测试不通过)的测试在该位置
+
+编写一个测试脚本（test.js），它并不需要做什么，只要不抛异常退出就可以了，否则测试会失败。
+```json
+"scripts": {
+    "test": "node test.js"
+},
+```
+
+## 07 Package Niceties
+
+在使用`npm init --scope=<username>`来初始化一个项目的package.json文件时，仅按照默认来执行时少了很多信息，在发布之前，得先完善这些信息。
+```
+zuzhideMacBook-Pro:node2 zuzhi$ npm install
+npm WARN @zuzhi/node2@1.0.0 No description
+npm WARN @zuzhi/node2@1.0.0 No repository field.
+```
+
+首先，创建一个`README.md`文件，然后，添加"repository"字段（对应能访问到代码的链接）到package.json文件中。
+
+可以通过重新运行`npm init`来实现，或者手动修改package.json文件。
+
+## 08 Publish
+
+使用`npm publish`命令来发布包，发布前确保你在正确的文件夹类，要是发布错了可以移除。
+
+## 09 Version
+
+```
+  1.2.3
+  ^ ^ ^
+  | | `-- Patch version. Update for every change.
+  | `---- Minor version. Update for API additions.
+  `------ Major version. Update for breaking API changes.
+```
+
+`npm version`用来更新package.json文件并将改变提交到git（如果你的工程是一个git repository的话）
+
+## 10 Publish Again
+
+改变了版本号之后，可以再次发布。
+
+## 11 Dist Tag
+
+> Every published package on npm has a `dist-tags` entry on it which
+maps strings like "latest" to version numbers like "1.2.48".
+
+```
+zuzhideMacBook-Pro:node zuzhi$ npm dist-tag -h
+npm dist-tag add <pkg>@<version> [<tag>]
+npm dist-tag rm <pkg> <tag>
+npm dist-tag ls [<pkg>]
+zuzhideMacBook-Pro:node zuzhi$ npm dist-tag ls
+latest: 1.0.0
+```
+
+## 12 Dist Tag Removal
+
+> The only dist-tag you CAN'T ever remove is "latest".
+
+> You CAN point "latest" to a different version, or delete other tags.
+
+##  13 Outdated
+
+> Now that we have some dependencies, and you've learned that your own
+packages can be updated repeatedly, the obvious question is: What do
+we do when someone *else* updates *their* package?
+
+`npm outdated`命令用来检查过期的依赖包
+
+## 14 Update
+
+> It's fine, of course, to explicitly check for outdated modules,
+and then run `npm install` to pull them in.
+
+但是`npm update [-g] [<pkg>...]`命令可以直接更新包，详细用法如下：
+
+```
+NPM-UPDATE(1)                                                    NPM-UPDATE(1)
+
+NAME
+       npm-update - Update a package
+
+SYNOPSIS
+         npm update [-g] [<pkg>...]
+
+DESCRIPTION
+       This  command will update all the packages listed to the latest version
+       (specified by the tag config), respecting semver.
+
+       It will also install  missing  packages.  As  with  all  commands  that
+       install  packages, the --dev flag will cause devDependencies to be pro-
+       cessed as well.
+
+       If the  -g  flag  is  specified,  this  command  will  update  globally
+       installed packages.
+
+       If no package name is specified, all packages in the specified location
+       (global or local) will be updated.
+```
+
+## 15 Rm
+
+`npm rm`命令用来删除包，命令使用方法如下：
+```
+zuzhideMacBook-Pro:node zuzhi$ npm rm -h
+npm uninstall [<@scope>/]<pkg>[@<version>]... [--save|--save-dev|--save-optional]
+
+aliases: remove, rm, r, un, unlink
+```
+可见，同样可以使用`--save`参数来移除package.json中的引用
+
+## 16 Finale
+
+**adventures**
+
+1. Splitting your app up into multiple modules
+2. Sharing private code with teammates using scoped modules
+3. Other fun npm commands, like `edit` and `bugs` and `explore`!
+
+**tips**
+
+It all starts with the thought: "There should be a module that does this..."
