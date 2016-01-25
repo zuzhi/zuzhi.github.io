@@ -43,7 +43,7 @@ HOW-TO-NPM
 安装nodejs，npm也被一起安装了。
 
 npm帮助类的命令：
-```java
+```xml
 npm <cmd> -h     quick help on <cmd>
 npm -l           display full usage info
 npm faq          commonly asked questions
