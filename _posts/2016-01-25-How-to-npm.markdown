@@ -17,6 +17,7 @@ node programs.
 `how-to-npm`的菜单如下：
 
 ```
+
 HOW-TO-NPM
     ----------
     00 Install npm                                        [COMPLETED]
@@ -44,7 +45,7 @@ HOW-TO-NPM
 安装nodejs，npm也被一起安装了。
 
 npm帮助类的命令：
-```xml
+```
 npm <cmd> -h     quick help on <cmd>
 npm -l           display full usage info
 npm faq          commonly asked questions
@@ -64,16 +65,19 @@ npm的另一个优点是你可以**建立账户**并发布自己写的package，
 
 ## 03 Start A Project
 `npm init --scope=<username>`，将创建一个package.json文件
-```java
+
+```
 See `npm help json` for definitive documentation on these fields
 and exactly what they do.
 ```
 之后再使用`npm install <pkg> --save`来安装包并将其作为依赖包加入到package.json的相应位置
-```java
+
+```
 Use `npm install <pkg> --save` afterwards to install a package and
 save it as a dependency in the package.json file.
 ```
 按照提示输入以下信息（括号中为默认值）创建package.json文件
+
 ```
 name(@zuzhi/node),
 version(1.0.0),
@@ -198,6 +202,7 @@ and then run `npm install` to pull them in.
 但是`npm update [-g] [<pkg>...]`命令可以直接更新包，详细用法如下：
 
 ```
+
 NPM-UPDATE(1)                                                    NPM-UPDATE(1)
 
 NAME
