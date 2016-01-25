@@ -17,7 +17,6 @@ node programs.
 `how-to-npm`的菜单如下：
 
 ```
-
 HOW-TO-NPM
     ----------
     00 Install npm                                        [COMPLETED]
@@ -91,7 +90,7 @@ license(ISC)
 ```
 全部按照默认值在node2文件下以用户zuzhi来创建的package.json文件如下：
 
-```json
+```
 {
   "name": "@zuzhi/node2",
   "version": "1.0.0",
@@ -202,7 +201,6 @@ and then run `npm install` to pull them in.
 但是`npm update [-g] [<pkg>...]`命令可以直接更新包，详细用法如下：
 
 ```
-
 NPM-UPDATE(1)                                                    NPM-UPDATE(1)
 
 NAME
