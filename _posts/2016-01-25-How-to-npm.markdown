@@ -11,7 +11,8 @@ categories: nodejs
 > npm  is  the package manager for the Node JavaScript platform.  It puts modules in place so that node can find  them,  and  manages  dependency conflicts intelligently. It  is  extremely  configurable to support a wide variety of use cases. Most commonly, it is used to publish, discover,  install,  and  develop
 node programs.
 
-为了学习nodejs，我把`NodeSchool`-(nodeschool.io)的`how-to-npm`-(https://github.com/npm/how-to-npm)作为参考教程
+为了学习nodejs，我把[NodeSchool](nodeschool.io)的[how-to-npm
+](https://github.com/npm/how-to-npm)作为参考教程
 
 `how-to-npm`的菜单如下：
 
@@ -85,6 +86,7 @@ author,
 license(ISC)
 ```
 全部按照默认值在node2文件下以用户zuzhi来创建的package.json文件如下：
+
 ```json
 {
   "name": "@zuzhi/node2",
