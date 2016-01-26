@@ -16,7 +16,7 @@ node programs.
 
 `how-to-npm`的菜单如下：
 
-```
+~~~
 HOW-TO-NPM
     ----------
     00 Install npm                                        [COMPLETED]
@@ -38,19 +38,20 @@ HOW-TO-NPM
     16 Finale                                             [COMPLETED]
     -----------------
     HELP
-```
+~~~
 
 ## 00 Install npm
 安装nodejs，npm也被一起安装了。
 
 npm帮助类的命令：
-```
+
+~~~
 npm <cmd> -h     quick help on <cmd>
 npm -l           display full usage info
 npm faq          commonly asked questions
 npm help <term>  search for help on <term>
 npm help npm     involved overview
-```
+~~~
 第一个命令可以快速查看`<cmd>`的用法，第三个是查看详细说明
 
 ## 01 Dev Environment
@@ -65,19 +66,19 @@ npm的另一个优点是你可以**建立账户**并发布自己写的package，
 ## 03 Start A Project
 `npm init --scope=<username>`，将创建一个package.json文件
 
-```
+~~~
 See `npm help json` for definitive documentation on these fields
 and exactly what they do.
-```
+~~~
 之后再使用`npm install <pkg> --save`来安装包并将其作为依赖包加入到package.json的相应位置
 
-```
+~~~
 Use `npm install <pkg> --save` afterwards to install a package and
 save it as a dependency in the package.json file.
-```
+~~~
 按照提示输入以下信息（括号中为默认值）创建package.json文件
 
-```
+~~~
 name(@zuzhi/node),
 version(1.0.0),
 description(),
@@ -87,10 +88,10 @@ git repository,
 keywords,
 author,
 license(ISC)
-```
+~~~
 全部按照默认值在node2文件下以用户zuzhi来创建的package.json文件如下：
 
-```
+~~~
 {
   "name": "@zuzhi/node2",
   "version": "1.0.0",
@@ -102,7 +103,7 @@ license(ISC)
   "author": "",
   "license": "ISC"
 }
-```
+~~~
 
 ## 04 Install a module
 
@@ -118,28 +119,29 @@ folder.
 ## 06 npm Test
 
 当前的package.json中，scripts一项如下：
-```json
+~~~json
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
 },
-```
+~~~
 npm可以作为一个task runner，几乎所有的模块和工程都有一个测试脚本来保证一切正常，为了提醒你完善该脚本，npm默认放了一个"always failing"(总是测试不通过)的测试在该位置
 
 编写一个测试脚本（test.js），它并不需要做什么，只要不抛异常退出就可以了，否则测试会失败。
-```json
+~~~ json
 "scripts": {
     "test": "node test.js"
 },
-```
+~~~
 
 ## 07 Package Niceties
 
 在使用`npm init --scope=<username>`来初始化一个项目的package.json文件时，仅按照默认来执行时少了很多信息，在发布之前，得先完善这些信息。
-```
+
+~~~ bash
 zuzhideMacBook-Pro:node2 zuzhi$ npm install
 npm WARN @zuzhi/node2@1.0.0 No description
 npm WARN @zuzhi/node2@1.0.0 No repository field.
-```
+~~~
 
 首先，创建一个`README.md`文件，然后，添加"repository"字段（对应能访问到代码的链接）到package.json文件中。
 
@@ -151,13 +153,13 @@ npm WARN @zuzhi/node2@1.0.0 No repository field.
 
 ## 09 Version
 
-```
+~~~
   1.2.3
   ^ ^ ^
   | | `-- Patch version. Update for every change.
   | `---- Minor version. Update for API additions.
   `------ Major version. Update for breaking API changes.
-```
+~~~
 
 `npm version`用来更新package.json文件并将改变提交到git（如果你的工程是一个git repository的话）
 
@@ -170,14 +172,14 @@ npm WARN @zuzhi/node2@1.0.0 No repository field.
 > Every published package on npm has a `dist-tags` entry on it which
 maps strings like "latest" to version numbers like "1.2.48".
 
-```
+~~~ bash
 zuzhideMacBook-Pro:node zuzhi$ npm dist-tag -h
 npm dist-tag add <pkg>@<version> [<tag>]
 npm dist-tag rm <pkg> <tag>
 npm dist-tag ls [<pkg>]
 zuzhideMacBook-Pro:node zuzhi$ npm dist-tag ls
 latest: 1.0.0
-```
+~~~
 
 ## 12 Dist Tag Removal
 
@@ -200,7 +202,7 @@ and then run `npm install` to pull them in.
 
 但是`npm update [-g] [<pkg>...]`命令可以直接更新包，详细用法如下：
 
-```
+~~~
 NPM-UPDATE(1)                                                    NPM-UPDATE(1)
 
 NAME
@@ -222,17 +224,18 @@ DESCRIPTION
 
        If no package name is specified, all packages in the specified location
        (global or local) will be updated.
-```
+~~~
 
 ## 15 Rm
 
 `npm rm`命令用来删除包，命令使用方法如下：
-```
+
+~~~ bash
 zuzhideMacBook-Pro:node zuzhi$ npm rm -h
 npm uninstall [<@scope>/]<pkg>[@<version>]... [--save|--save-dev|--save-optional]
 
 aliases: remove, rm, r, un, unlink
-```
+~~~
 可见，同样可以使用`--save`参数来移除package.json中的引用
 
 ## 16 Finale
