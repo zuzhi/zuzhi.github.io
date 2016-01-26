@@ -5,7 +5,7 @@ data: 2016-01-25 18:53:03
 categories: markdown
 ---
 
-```
+```json
 This should be a code block
 1
 2
