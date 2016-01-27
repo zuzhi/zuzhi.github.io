@@ -7,7 +7,7 @@ categories: hackintosh
 ![OS X El Captain](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-01-19%20%E4%B8%8B%E5%8D%885.50.08.jpg "OS X El Captain")
 
 ## 写在前面
-OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是要求读书的时候，我肯定早就当小白鼠尝鲜了，无奈之前太忙没时间折腾。还好最近偷闲得一两个周末，把系统重新装了一下，苹果系统还是那么可口。✌
+OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是还在读书的时候，我肯定早就当小白鼠尝鲜了，无奈之前太忙没时间折腾。还好最近偷闲得一两个周末，把系统重新装了一下，苹果系统还是那么可口。✌
 
 ### 注意事项
 如果你之前没有接触过黑苹果，有些事情你要先有所了解。
