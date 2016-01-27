@@ -31,7 +31,7 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是还
 
 ### 1. 下载懒人版镜像，安装中的工具和Extra文件夹
 - 镜像 - 百度云：http://pan.baidu.com/s/1pKeeB3t 提取密码：`d912`
-![懒人版镜像](../../../../img/tutorial-captures/QQ20160114-0.png "懒人版镜像")
+![懒人版镜像](../../../../img/tutorial-captures/QQ20160114-0.png "懒人版镜像"){:height="36px" width="36px"}
 - 工具 - 百度云：http://pan.baidu.com/s/1mhcPPji 提取密码：`wuhc`
 ![工具](../../../../img/tutorial-captures/QQ20160119-0.png "工具")
 - Extra - 百度云：http://pan.baidu.com/s/1jGSe9XO 提取密码：`u5vy`
