@@ -4,7 +4,7 @@ title: "OS X El Captain On N55SL- Hackintosh"
 data: 2016-01-17 20:56:00
 categories: hackintosh
 ---
-![OS X El Captain](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-01-19%20%E4%B8%8B%E5%8D%885.50.08.jpg "OS X El Captain")
+![OS X El Captain](../img/tutorial-captures/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-01-19%20%E4%B8%8B%E5%8D%885.50.08.jpg "OS X El Captain")
 
 ## 写在前面
 OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是还在读书的时候，我肯定早就当小白鼠尝鲜了，无奈之前太忙没时间折腾。还好最近偷闲得一两个周末，把系统重新装了一下，苹果系统还是那么可口。✌
@@ -31,11 +31,11 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是还
 
 ### 1. 下载懒人版镜像，安装中的工具和Extra文件夹
 - 镜像 - 百度云：http://pan.baidu.com/s/1pKeeB3t 提取密码：`d912`
-![懒人版镜像](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/QQ20160114-0.png "懒人版镜像")
+![懒人版镜像](../img/tutorial-captures/QQ20160114-0.png "懒人版镜像")
 - 工具 - 百度云：http://pan.baidu.com/s/1mhcPPji 提取密码：`wuhc`
-![工具](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/QQ20160119-0.png "工具")
+![工具](../img/tutorial-captures/QQ20160119-0.png "工具")
 - Extra - 百度云：http://pan.baidu.com/s/1jGSe9XO 提取密码：`u5vy`
-![Extra](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/QQ20160119-1.png "Extra")
+![Extra](../img/tutorial-captures/QQ20160119-1.png "Extra")
 
 ### 2. 写入懒人版镜像到硬盘分区（启动分区）
 
@@ -48,24 +48,24 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是还
 
 #### 2.2. 使用硬盘安装助手将镜像写入到硬盘
 以管理员身份运行硬盘安装助手，去掉除了［写入］之外的勾选项，选择之前下载的懒人版镜像，选择之前制作好的磁盘分区（不要选错！），写入。
-![使用硬盘安装助手将镜像写入到硬盘](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117144615.png "使用硬盘安装助手将镜像写入到硬盘")
+![使用硬盘安装助手将镜像写入到硬盘](../img/tutorial-captures/snip_20160117144615.png "使用硬盘安装助手将镜像写入到硬盘")
 
 ### 3. 启动分区－/Extra调整以及修改
 
 3.1. 安装变色龙启动器，分两步，一是使用变色龙安装器安装，二是替换C盘根目录下的wowpc.iso，替换成要使用的版本。本次安装使用了2795版
 
 3.2. 替换启动分区Extra目录下的文件
-![调整后的Extra文件夹](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117145719.png "调整后的Extra文件夹")
+![调整后的Extra文件夹](../img/tutorial-captures/snip_20160117145719.png "调整后的Extra文件夹")
 
 
 ### 4. 启动分区－文件调整
 
 4.1. 之前制作的启动分区，根目录下少了一个文件BaseSystem.dmg，但是制作启动分区是，硬盘安装助手会减小分区的大小，导致分区空间不足以放下这个文件，我的解决方法是删除掉/S/L/E下的NVD开头的和AMD开头的驱动，删除/S/I/P下的两个PayLoads文件夹，这样启动分区就可以放下BaseSystem.dmg文件了，将其放入根目录。
-![文件调整，放入BaseSystem.dmg](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117145706.png "文件调整，放入BaseSystem.dmg")
+![文件调整，放入BaseSystem.dmg](../img/tutorial-captures/snip_20160117145706.png "文件调整，放入BaseSystem.dmg")
 
 ### 5. 启动分区－启动
 不出意外的话，选择启动分区（OS X BaseSystem），回车，就可以启动安装系统了。注：变色龙的启动标志（kernel flags）在/Extra下的org.chameleon.Boot.plist文件里配置。其中-f代表重建系统缓存，-v表示啰嗦模式，会显示启动过程中执行记录。也可以在选择里启动磁盘时，手动敲上这些标志。
-![org.chameleon.Boot.plist文件](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117145814.png "org.chameleon.Boot.plist文件")
+![org.chameleon.Boot.plist文件](../img/tutorial-captures/snip_20160117145814.png "org.chameleon.Boot.plist文件")
 
 
 ### 6. 安装
@@ -77,11 +77,11 @@ OS X El Captain也就是10.11这个版本出来已经有一阵子了，要是还
 ### 8. 系统分区－启动
 启动。一些简单的配置之后，进入系统。搞定。
 最后我的系统磁盘是这样的：
-![我的系统磁盘分区](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/tutorial-captures/snip_20160117144412.png "我的系统磁盘分区")
+![我的系统磁盘分区](../img/tutorial-captures/snip_20160117144412.png "我的系统磁盘分区")
 
 ### 9. 写在最后
 当然啦，教程难免有不尽详细之处，要是安装过程中遇到问题，可以联系我解决。不忙的时候，我总是很热心的。:p
 
 > 最后，我在筹钱购置主机和域名来升级我的博客，认可我的付出，不妨扫一扫下面的二维码进行微信打赏。捂脸~。:p
 
-![微信打赏](https://raw.githubusercontent.com/zuzhi/zuzhi.github.io/master/img/IMG_1479_cut.jpg "微信打赏")
+![微信打赏](../img/IMG_1479_cut.jpg "微信打赏")
